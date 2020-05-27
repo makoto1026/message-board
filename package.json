@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/cli": "^4.3.1",
     "core-js": "^3.6.4",
+    "pug-plain-loader": "^1.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
   },
@@ -33,6 +34,22 @@
     "sass-loader": "^8.0.2",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "warn"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
   "_id": "@",
   "readme": "ERROR: No README data found!"
