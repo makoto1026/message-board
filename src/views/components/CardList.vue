@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang='pug'>
   .cardList
     p message
     Card(v-for="n in 4" :key="n" class="Card" :name='name' :message='message')
@@ -8,19 +8,13 @@
 import Vue from 'vue'
 import Card from '@/views/components/Card.vue'
 
-export type DataType = {
-  name: string;
-  message: string;
-};
 export default Vue.extend({
+  props: {
+    name: String,
+    message: String
+  },
   components: {
     Card
-  },
-  data (): DataType {
-    return {
-      name: 'aaa',
-      message: 'bbb'
-    }
   }
 })
 </script>

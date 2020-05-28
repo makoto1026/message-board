@@ -8,7 +8,9 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Screen',
-    component: Screen
+    components: {
+      Screen
+    }
   }
 ]
 
