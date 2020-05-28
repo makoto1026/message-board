@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang='pug'>
   .card
     #name {{ name }}
     #message {{ message }}

@@ -1,6 +1,4 @@
-<script lang="ts">
-
-export default class Article {
+export default class Card {
   name: string;
   message: string;
 
@@ -9,5 +7,3 @@ export default class Article {
     this.message = message
   }
 }
-
-</script>

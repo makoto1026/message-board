@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang='pug'>
   #header
     p message bord
     CardList
@@ -7,25 +7,26 @@
 <script lang="ts">
 import Vue from 'vue'
 import CardList from '@/views/components/CardList.vue'
-import ArticleRepository from '@repository/ArticleRepository.vue'
 
-export type DataType = {
-  name: string;
-  message: string;
-};
-
-Vue.extend({
-  name: 'Screen',
-  components: { CardList, ArticleRepository },
-
+export type DataType = {card: { name: string; message: string}[]}
+export default Vue.extend({
+  props: {
+    name: String,
+    message: String
+  },
+  name: 'Card-List',
+  components: { CardList },
   data (): DataType {
     return {
-      article: []
+      card: []
     }
   },
   mounted () {
-    async function getArticles () {
-      this.articles = await this.$repos.ArticleRepository.getArticles()
+    this.getCard()
+  },
+  methods: {
+    async getCard () {
+      this.card = await this.$repos.CardRepository.getCard()
     }
   }
 })

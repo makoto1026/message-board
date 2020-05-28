@@ -1,15 +1,16 @@
 import Vue from 'vue'
-import ArticleRepository from '@/repository/ArticleRepository.vue'
-
-new Vue({
-});
+import { CardRepository } from '@/repositories/CardRepository'
 
 type Repositories = {
-  ArticleRepository: ArticleRepository;
+  CardRepository: CardRepository;
 };
-
-declare module "vue/types/vue" {
+declare module 'vue/types/vue' {
   interface Vue {
     $repos: Repositories;
   }
 }
+
+Vue.prototype.$repos = {
+  CardRepository: new APICardRepository()
+}
+
