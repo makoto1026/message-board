@@ -10,7 +10,4 @@ declare module 'vue/types/vue' {
   }
 }
 
-Vue.prototype.$repos = {
-  CardRepository: new APICardRepository()
-}
 

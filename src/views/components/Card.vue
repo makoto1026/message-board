@@ -8,10 +8,8 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  props: {
-    name: String,
-    message: String
-  }
+  name: 'Card',
+  props: ['name', 'message']
 })
 </script>
 
@@ -20,7 +18,7 @@ export default Vue.extend({
     height: 70px;
     border: 1px solid black;
     margin-bottom: 20px;
-    padding: 30px;
+    padding: 0 30px;
     #name {
       height: 30%;
     }

@@ -10,10 +10,6 @@ import CardList from '@/views/components/CardList.vue'
 
 export type DataType = {card: { name: string; message: string}[]}
 export default Vue.extend({
-  props: {
-    name: String,
-    message: String
-  },
   name: 'Card-List',
   components: { CardList },
   data (): DataType {

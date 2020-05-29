@@ -8,13 +8,21 @@
 import Vue from 'vue'
 import Card from '@/views/components/Card.vue'
 
+export type DataType = { name: Array<string>; message: Array<string> };
 export default Vue.extend({
-  props: {
-    name: String,
-    message: String
-  },
+  name: 'CardList',
   components: {
     Card
+  },
+  data (): DataType {
+    return {
+      name: ['佐藤', '加藤', '田中', '鈴木'],
+      message: ['message1', 'message2', 'message3', 'message4']
+    }
+  },
+  props: ['card'],
+  created () {
+    console.log(this.card)
   }
 })
 </script>

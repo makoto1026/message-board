@@ -4,16 +4,11 @@ import Screen from '@/views/Screen.vue'
 
 Vue.use(VueRouter)
 
-const routes: Array<RouteConfig> = [
-  {
-    path: '/',
-    name: 'Screen',
-    components: {
-      Screen
-    }
-  }
-]
-
+const routes: Array<RouteConfig> = [{
+  path: '/',
+  name: 'Screen',
+  component: Screen
+}]
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
