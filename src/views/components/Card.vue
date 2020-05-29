@@ -13,10 +13,10 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .card {
-    height: 70px;
-    border: 1px solid black;
+    height: 150px;
+    border: 1px solid rgb(209, 209, 209);
     margin-bottom: 20px;
     padding: 0 30px;
     #name {
@@ -24,7 +24,6 @@ export default Vue.extend({
     }
     #message {
       height: 70%;
-      line-height: 70px;
     }
   }
 </style>

@@ -1,6 +1,6 @@
  <template lang='pug'>
   #app
-    router-view(to="/")
+    router-view
 </template>
 
 <style lang="scss">

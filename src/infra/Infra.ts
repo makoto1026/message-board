@@ -1,4 +1,4 @@
-import { CardRepository } from '@/repositories/CardRepository'
+import CardRepository from '@/repositories/CardRepository'
 import Card from '@/models/Model'
 
 export default class APICardRepository implements CardRepository {
