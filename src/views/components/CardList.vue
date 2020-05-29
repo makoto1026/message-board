@@ -1,7 +1,7 @@
 <template lang='pug'>
   .cardList
     p message
-    Card(v-for="n in 4" :key="n" class="Card" :name='name' :message='message')
+    Card.card(v-for="n, index in 3" :key="n" :name="name[index]" :message="message[index]" class="card")
 </template>
 
 <script lang="ts">
@@ -16,20 +16,17 @@ export default Vue.extend({
   },
   data (): DataType {
     return {
-      name: ['佐藤', '加藤', '田中', '鈴木'],
-      message: ['message1', 'message2', 'message3', 'message4']
+      name: ['藤井', '玉浦', '早矢仕'],
+      message: ['あああ', 'いいい', 'ううう']
     }
   },
-  props: ['card'],
-  created () {
-    console.log(this.card)
-  }
+  props: ['card']
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .cardList {
-    padding: 0 50px;
+    padding: 100px 200px;
     text-align: left;
     p {
       font-size: 30px;

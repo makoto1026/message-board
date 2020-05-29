@@ -5,11 +5,11 @@ import APICardRepository from '@/infra/Infra'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$repos = {
+  CardRepository: new APICardRepository()
+}
+
 new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
-
-Vue.prototype.$repos = {
-  CardRepository: new APICardRepository()
-}

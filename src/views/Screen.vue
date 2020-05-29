@@ -1,7 +1,7 @@
 <template lang='pug'>
   #header
     p message bord
-    CardList
+    CardList( :card="card")
 </template>
 
 <script lang="ts">

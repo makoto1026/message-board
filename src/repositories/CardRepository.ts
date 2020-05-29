@@ -1,5 +1,5 @@
 import Card from '@/models/Model'
 
-export interface CardRepository {
+export default interface CardRepository {
   getCard(): Promise<Card[]>;
 }
