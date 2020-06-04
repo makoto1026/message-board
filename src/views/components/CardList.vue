@@ -26,7 +26,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   .cardList {
-    padding: 100px 200px;
+    padding: 50px 200px;
     text-align: left;
     p {
       font-size: 30px;
